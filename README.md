@@ -1,34 +1,3 @@
-Below you'll find information about performing common tasks. The most recent version of this guide is available here.
-
-Table of Contents
-Updating to New Releases
-Available Scripts
-npm start
-npm test
-npm run ios
-npm run android
-npm run eject
-Writing and Running Tests
-Environment Variables
-Configuring Packager IP Address
-Adding Flow
-Customizing App Display Name and Icon
-Sharing and Deployment
-Publishing to Expo's React Native Community
-Building an Expo "standalone" app
-Ejecting from Create React Native App
-Build Dependencies (Xcode & Android Studio)
-Should I Use ExpoKit?
-Troubleshooting
-Networking
-iOS Simulator won't open
-QR Code does not scan
-Updating to New Releases
-You should only need to update the global installation of create-react-native-app very rarely, ideally never.
-
-Updating the react-native-scripts dependency of your app should be as simple as bumping the version number in package.json and reinstalling your project's dependencies.
-
-Upgrading to a new version of React Native requires updating the react-native, react, and expo package versions, and setting the correct sdkVersion in app.json. See the versioning guide for up-to-date information about package version compatibility.
 
 Available Scripts
 If Yarn was installed when the project was initialized, then dependencies will have been installed via Yarn, and you should probably use it to run these commands as well. Unlike dependency installation, command running syntax is identical for Yarn and NPM at the time of this writing.
