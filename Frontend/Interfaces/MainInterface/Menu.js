@@ -1,34 +1,36 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
-import { IconButton, Colors } from "react-native-paper";
+import { IconButton, Colors, Appbar } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-export default function WelcomeUI({ navigation }) {
+export default function Menu() {
   return (
     <View style={styles.container}>
-      <View style={styles.header}></View>
       <Image
         style={styles.avatar}
         source={{ uri: "https://bootdey.com/img/Content/avatar/avatar6.png" }}
       />
       <View style={styles.body}>
         <View style={styles.bodyContent}>
-          <Text style={styles.name}>JOHN DOE</Text>
-          <Text style={styles.welcome}>WELCOME USER!</Text>
-          <Text style={styles.description}>Choose a Language to continue</Text>
-
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => navigation.navigate("Menu")}
-          >
-            <Text style={styles.button}>ENGLISH</Text>
+          <Text style={styles.welcome}>WHERE YOU NEED TO GO!</Text>
+          <TouchableOpacity style={styles.buttonContainer}>
+            <Text style={styles.button}>VOICE SERACH</Text>
           </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => navigation.navigate("Menu")}
-          >
-            <Text style={styles.button}>TAMIL</Text>
+          <TouchableOpacity style={styles.buttonContainer}>
+            <Text style={styles.button}>PRODUCT LIST SEARCH</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonContainer}>
+            <Text style={styles.button}>IMAGE SERACH</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonContainer}>
+            <Text style={styles.button}>PROFILE</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonContainer}>
+            <Text style={styles.button}>ORDERS</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonContainer}>
+            <Text style={styles.button}>LIGHT NOW ASSISTANT</Text>
           </TouchableOpacity>
           <IconButton
             style={styles.mic}
@@ -46,24 +48,20 @@ export default function WelcomeUI({ navigation }) {
 const styles = StyleSheet.create({
   header: {
     backgroundColor: "#b01280",
-    height: 130,
+    height: 80,
   },
   avatar: {
-    width: 130,
-    height: 130,
+    width: 80,
+    height: 80,
     borderRadius: 63,
     borderWidth: 4,
     borderColor: "white",
     marginBottom: 10,
-    alignSelf: "center",
+    alignSelf: "flex-end",
     position: "absolute",
-    marginTop: 50,
+    marginTop: 0,
   },
-  name: {
-    fontSize: 22,
-    color: "#FFFFFF",
-    fontWeight: "600",
-  },
+
   body: {
     marginTop: 40,
   },
@@ -72,35 +70,40 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 30,
   },
-  name: {
-    fontSize: 28,
+  bck: {
+    alignSelf: "flex-start",
+  },
+  back: {
+    fontSize: 20,
     color: "#696969",
     fontWeight: "600",
+    alignSelf: "flex-start",
+    position: "absolute",
+    marginTop: -15,
+    paddingLeft: 35,
+  },
+  backarw: {
+    marginTop: -19,
   },
   welcome: {
     fontSize: 30,
     color: "#00BFFF",
     marginTop: 50,
-  },
-  description: {
-    fontSize: 26,
-    color: "#696969",
-    marginTop: 30,
     textAlign: "center",
   },
   buttonContainer: {
-    marginTop: 30,
+    marginTop: 15,
     height: 45,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 20,
-    width: 200,
-    borderRadius: 30,
+    width: 300,
+    borderRadius: 10,
     backgroundColor: "#b01280",
   },
   button: {
-    fontSize: 24,
+    fontSize: 20,
     color: "#FFFF",
   },
   mic: {
