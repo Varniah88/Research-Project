@@ -1,8 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { IconButton, Colors, Appbar } from "react-native-paper";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
 
 export default function Menu() {
   return (
@@ -46,10 +44,6 @@ export default function Menu() {
 }
 
 const styles = StyleSheet.create({
-  header: {
-    backgroundColor: "#b01280",
-    height: 80,
-  },
   avatar: {
     width: 80,
     height: 80,
@@ -70,25 +64,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 30,
   },
-  bck: {
-    alignSelf: "flex-start",
-  },
-  back: {
-    fontSize: 20,
-    color: "#696969",
-    fontWeight: "600",
-    alignSelf: "flex-start",
-    position: "absolute",
-    marginTop: -15,
-    paddingLeft: 35,
-  },
-  backarw: {
-    marginTop: -19,
-  },
+
   welcome: {
     fontSize: 30,
-    color: "#00BFFF",
-    marginTop: 50,
+    color: "#02137d",
+    marginTop: 20,
     textAlign: "center",
   },
   buttonContainer: {
@@ -100,7 +80,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     width: 300,
     borderRadius: 10,
-    backgroundColor: "#b01280",
+    backgroundColor: "#6bd69d",
   },
   button: {
     fontSize: 20,

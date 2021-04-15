@@ -1,8 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { IconButton, Colors } from "react-native-paper";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
 
 export default function WelcomeUI({ navigation }) {
   return (
@@ -45,7 +43,7 @@ export default function WelcomeUI({ navigation }) {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: "#b01280",
+    backgroundColor: "#6bd69d",
     height: 130,
   },
   avatar: {
@@ -79,12 +77,12 @@ const styles = StyleSheet.create({
   },
   welcome: {
     fontSize: 30,
-    color: "#00BFFF",
+    color: "#02137d",
     marginTop: 50,
   },
   description: {
     fontSize: 26,
-    color: "#696969",
+    color: "#030f54",
     marginTop: 30,
     textAlign: "center",
   },
@@ -97,7 +95,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     width: 200,
     borderRadius: 30,
-    backgroundColor: "#b01280",
+    backgroundColor: "#6bd69d",
   },
   button: {
     fontSize: 24,
