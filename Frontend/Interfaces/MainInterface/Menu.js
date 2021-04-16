@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { IconButton, Colors, Appbar } from "react-native-paper";
 
-export default function Menu() {
+export default function Menu({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
@@ -15,7 +15,7 @@ export default function Menu() {
           <TouchableOpacity style={styles.buttonContainer}>
             <Text style={styles.button}>VOICE SERACH</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.buttonContainer}  onPress={() => navigation.navigate("Capture product list")}>
             <Text style={styles.button}>PRODUCT LIST SEARCH</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonContainer}>
