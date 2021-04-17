@@ -13,10 +13,7 @@ import { IconButton, Colors } from "react-native-paper";
 
 function CaptureImage({ navigation }) {
   return (
-    <ImageBackground
-      style={styles.background}
-      source={require("../../assets/bg.png")}
-    >
+    <View style={styles.background}>
       <Image
         style={styles.avatar}
         source={{ uri: "https://bootdey.com/img/Content/avatar/avatar6.png" }}
@@ -28,11 +25,11 @@ function CaptureImage({ navigation }) {
       <IconButton
         style={styles.camera}
         icon="camera"
-        color={Colors.white}
+        color={Colors.red600}
         size={50}
         onPress={() => navigation.navigate("Capture Product List")}
       />
-    </ImageBackground>
+    </View>
   );
 }
 const styles = StyleSheet.create({
@@ -53,7 +50,7 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 26,
-    color: "white",
+    color: "#02137d",
     marginTop: 300,
     textAlign: "center",
   },
