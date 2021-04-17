@@ -12,10 +12,16 @@ export default function Menu({ navigation }) {
       <View style={styles.body}>
         <View style={styles.bodyContent}>
           <Text style={styles.welcome}>WHERE YOU NEED TO GO!</Text>
-          <TouchableOpacity style={styles.buttonContainer}>
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={() => navigation.navigate("Create Product List")}
+          >
             <Text style={styles.button}>VOICE SERACH</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.buttonContainer}  onPress={() => navigation.navigate("Capture product list")}>
+          <TouchableOpacity
+            style={styles.buttonContainer}
+            onPress={() => navigation.navigate("Product List")}
+          >
             <Text style={styles.button}>PRODUCT LIST SEARCH</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonContainer}>
@@ -45,8 +51,8 @@ export default function Menu({ navigation }) {
 
 const styles = StyleSheet.create({
   avatar: {
-    width: 80,
-    height: 80,
+    width: 65,
+    height: 65,
     borderRadius: 63,
     borderWidth: 4,
     borderColor: "white",
@@ -80,7 +86,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     width: 300,
     borderRadius: 10,
-    backgroundColor: "#6bd69d",
+    backgroundColor: "#00716F",
   },
   button: {
     fontSize: 20,

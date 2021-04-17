@@ -43,7 +43,7 @@ export default function WelcomeUI({ navigation }) {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: "#6bd69d",
+    backgroundColor: "#00716F",
     height: 130,
   },
   avatar: {
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     width: 200,
     borderRadius: 30,
-    backgroundColor: "#6bd69d",
+    backgroundColor: "#00716F",
   },
   button: {
     fontSize: 24,
