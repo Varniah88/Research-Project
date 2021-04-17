@@ -24,7 +24,7 @@ function OCRScreen() {
        <IconButton
             style={styles.camera}
             icon="camera"
-            color={Colors.white}
+            color={Colors.black}
             size={50}
             onPress={() => pickFromGallery() }
           />
