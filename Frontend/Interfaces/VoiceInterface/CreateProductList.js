@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -7,9 +7,11 @@ import {
   TouchableOpacity,
   TextInput,
 } from "react-native";
-import { IconButton, Colors, Appbar } from "react-native-paper";
+import { IconButton, Colors, DataTable } from "react-native-paper";
 
 export default function CreateProductList() {
+  const [product, setProductName] = useState("");
+  const [quantity, setQuantity] = useState("");
   return (
     <View style={styles.container}>
       <View style={styles.body}>
@@ -19,6 +21,7 @@ export default function CreateProductList() {
           placeholder="Enter a Product"
           placeholderTextColor="#9a73ef"
           autoCapitalize="words"
+          onChangeText={(val) => setProductName(val)}
         />
 
         <TextInput
@@ -27,6 +30,7 @@ export default function CreateProductList() {
           placeholder="Enter the Quantity"
           placeholderTextColor="#9a73ef"
           autoCapitalize="none"
+          onChangeText={(val) => setQuantity(val)}
         />
 
         <View style={styles.add}>
@@ -41,6 +45,17 @@ export default function CreateProductList() {
           />
         </View>
       </View>
+      <DataTable>
+        <DataTable.Header>
+          <DataTable.Title>Product</DataTable.Title>
+          <DataTable.Title numeric>Quantity</DataTable.Title>
+        </DataTable.Header>
+
+        <DataTable.Row>
+          <DataTable.Cell>{product}</DataTable.Cell>
+          <DataTable.Cell numeric>{quantity}</DataTable.Cell>
+        </DataTable.Row>
+      </DataTable>
     </View>
   );
 }

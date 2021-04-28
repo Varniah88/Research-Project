@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { IconButton, Colors } from "react-native-paper";
 
+
 export default function WelcomeUI({ navigation }) {
   return (
     <View style={styles.container}>
